@@ -65,7 +65,7 @@
 			children = (
 				224474A11D5677A5009776E2 /* FibonacciTableViewCell.swift */,
 			);
-			name = Views;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		22F295DE1D56571C005919AF = {
@@ -89,11 +89,11 @@
 		22F295E91D56571D005919AF /* FibonacciList */ = {
 			isa = PBXGroup;
 			children = (
-				224474A01D567782009776E2 /* Views */,
 				22F2960A1D5657F6005919AF /* App */,
 				22F2960F1D56588E005919AF /* Globals */,
 				22F2960C1D56581F005919AF /* Resources */,
 				22F2960B1D565800005919AF /* View Controllers */,
+				224474A01D567782009776E2 /* Views */,
 			);
 			path = FibonacciList;
 			sourceTree = "<group>";
