@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		224474A21D5677A5009776E2 /* FibonacciTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224474A11D5677A5009776E2 /* FibonacciTableViewCell.swift */; };
 		22F295EB1D56571D005919AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F295EA1D56571D005919AF /* AppDelegate.swift */; };
 		22F295ED1D56571D005919AF /* FibonacciTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F295EC1D56571D005919AF /* FibonacciTableViewController.swift */; };
 		22F295F21D56571D005919AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22F295F11D56571D005919AF /* Assets.xcassets */; };
@@ -27,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		224474A11D5677A5009776E2 /* FibonacciTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FibonacciTableViewCell.swift; sourceTree = "<group>"; };
 		22F295E71D56571C005919AF /* FibonacciList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FibonacciList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22F295EA1D56571D005919AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		22F295EC1D56571D005919AF /* FibonacciTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FibonacciTableViewController.swift; sourceTree = "<group>"; };
@@ -58,6 +60,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		224474A01D567782009776E2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				224474A11D5677A5009776E2 /* FibonacciTableViewCell.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		22F295DE1D56571C005919AF = {
 			isa = PBXGroup;
 			children = (
@@ -79,6 +89,7 @@
 		22F295E91D56571D005919AF /* FibonacciList */ = {
 			isa = PBXGroup;
 			children = (
+				224474A01D567782009776E2 /* Views */,
 				22F2960A1D5657F6005919AF /* App */,
 				22F2960F1D56588E005919AF /* Globals */,
 				22F2960C1D56581F005919AF /* Resources */,
@@ -241,6 +252,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				22F295ED1D56571D005919AF /* FibonacciTableViewController.swift in Sources */,
+				224474A21D5677A5009776E2 /* FibonacciTableViewCell.swift in Sources */,
 				22F295EB1D56571D005919AF /* AppDelegate.swift in Sources */,
 				22F2960E1D565885005919AF /* Globals.swift in Sources */,
 			);
@@ -370,6 +382,7 @@
 				INFOPLIST_FILE = FibonacciList/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "-Xfrontend -debug-time-function-bodies";
 				PRODUCT_BUNDLE_IDENTIFIER = com.killectro.FibonacciList;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -383,6 +396,7 @@
 				INFOPLIST_FILE = FibonacciList/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "-Xfrontend -debug-time-function-bodies";
 				PRODUCT_BUNDLE_IDENTIFIER = com.killectro.FibonacciList;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";

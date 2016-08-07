@@ -23,6 +23,16 @@ final class FibonacciTableViewController: UITableViewController {
     private let fibonacci: (Int -> NSDecimalNumber) = memoize { (fibonacci: (Int -> NSDecimalNumber), n: Int) in
         return (n < 2) ? NSDecimalNumber(decimal: NSNumber(long: n).decimalValue) : fibonacci(n - 1).decimalNumberByAdding(fibonacci(n - 2))
     }
+
+    // MARK: - View lifecycle
+    override func viewDidLoad() {
+        tableView.estimatedRowHeight = 44
+        tableView.rowHeight = UITableViewAutomaticDimension
+    }
+
+    override func prefersStatusBarHidden() -> Bool {
+        return true
+    }
 }
 
 // MARK: - Table view data source
@@ -32,8 +42,8 @@ extension FibonacciTableViewController {
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath)
-        cell.textLabel?.text = formatter.stringFromNumber(fibonacci(indexPath.row))
+        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! FibonacciTableViewCell
+        cell.numberLabel.text = formatter.stringFromNumber(fibonacci(indexPath.row + 1))
         return cell
     }
 
