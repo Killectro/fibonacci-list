@@ -43,7 +43,9 @@ extension FibonacciTableViewController {
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! FibonacciTableViewCell
-        cell.numberLabel.text = formatter.stringFromNumber(fibonacci(indexPath.row + 1))
+        let n = indexPath.row + 1
+        let val = formatter.stringFromNumber(fibonacci(n)) ?? ""
+        cell.numberLabel.text = "fib(\(n)) = " + val
         return cell
     }
 
