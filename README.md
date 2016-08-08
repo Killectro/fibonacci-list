@@ -20,3 +20,11 @@ This application solves a simplified version of the above problem. It implements
  There are a few improvements to the app that could be made to more closely match the exact spec as well as improve performance at extremely high `n` values, but that I thought were out of the scope of a small assignment such as this.
  1. Use [swift-pons](https://github.com/dankogai/swift-pons) or something similar to account for huge Fibonacci values.
  2. Use a sliding range of fibonacci results rather than a typical list. This range would shift as the user scrolls and discard results that are more than a certain distance away from the user's current scroll position. This would ensure that the app's memory footprint would never grow so large that the OS will kill it, and it would grant us the ability to support displaying `fib(UInt.max)` since our table view's indices would no longer be tightly coupled with the `n` value we are calculating. This is a highly unusual and fairly complex implementation of a table view and as such I thought it would be out of the scope of this assignment, but I also thought it worth pointing out here.
+
+# Installation Instructions
+Run the following commands to download the repository and open the project in Xcode.
+```
+git clone git@github.com:Killectro/fibonacci-list.git
+cd fibonacci-list
+open FibonacciList/FibonacciList.xcodeproj
+```
